@@ -1,0 +1,17 @@
+<ion-view title="RSS Feed">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        <h1>{{ feed.title }}</h1>
+        <div>
+            <p>
+                Execution time: {{ executionTime }}
+            </p>
+        </div>
+        <ion-list>
+            <ion-item class="item-thumbnail-left" ng-repeat="item in feed.item">
+                <img src="{{ item.enclosure._url }}">
+                <h2>{{ item.title }}</h2>
+                <p>{{ item.description }}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
