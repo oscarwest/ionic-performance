@@ -14,6 +14,11 @@ angular.module('app.routes', [])
   // Each state's controller can be found in controllers.js
   $stateProvider
   
+  .state('tabsController', {
+    url: '/page1',
+    templateUrl: 'templates/tabsController.html',
+    abstract:true
+  })
 
   .state('tabsController.home', {
     url: '/home',
@@ -25,18 +30,22 @@ angular.module('app.routes', [])
     }
   })
 
-  .state('tabsController', {
-    url: '/page1',
-    templateUrl: 'templates/tabsController.html',
-    abstract:true
-  })
-
   .state('tabsController.rssFeed', {
     url: '/rss',
     views: {
       'tab2': {
         templateUrl: 'templates/rssFeed.html',
         controller: 'rssFeedCtrl'
+      }
+    }
+  })
+
+  .state('tabsController.primeCalc', {
+    url: '/primecalc',
+    views: {
+      'tab3': {
+        templateUrl: 'templates/primeCalc.html',
+        controller: 'primeCalcCtrl'
       }
     }
   })

@@ -1,0 +1,25 @@
+<ion-view title="Prime Calculator">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        <h1>Prime Calculator</h1>
+        <div>
+            <p>Beräknar primtal upp till 100</p>
+        </div>
+        <button class="button button-full button-positive" ng-click="getPrimes(100)">
+          Run calculation
+        </button>
+        <button class="button button-full button-assertive" ng-click="resetPrimes()">
+          Reset
+        </button>
+        <div class="list card">
+            <div class="item item-divider">Primtal lista</div>
+            <div class="item item-body">
+                <p>Execution time: {{ primesExecutionTime }}</p>
+                <ul>
+                    <li ng-repeat="item in primes">
+                        {{ item }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
