@@ -37,6 +37,7 @@ angular.module('app.controllers', ['xml'])
 	.controller('primeCalcCtrl', function($scope) {
 		console.log("inside prime calc ctrl");
 
+		// sieve of eratosthenes
 		$scope.getPrimes = function(max) {
 			var pre = performance.now();
 		    var sieve = [], i, j, primes = [];
@@ -52,6 +53,7 @@ angular.module('app.controllers', ['xml'])
 
 		    var post = performance.now();
 		    $scope.primesExecutionTime = post-pre;
+		    console.log("Test rounding foFixed: " + $scope.primesExecutionTime.toFixed(6));
 		    $scope.primes = primes;
 		}
 
