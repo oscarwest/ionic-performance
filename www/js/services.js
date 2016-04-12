@@ -9,7 +9,7 @@ angular.module('app.services', ['ngResource'])
 }])
 
 .factory('rssLoader', function($http, $resource){
-	return $resource('//ajax.googleapis.com/ajax/services/feed/load', {}, {
+	return $resource('https://ajax.googleapis.com/ajax/services/feed/load', {}, {
 		fetch: { method: 'JSONP', params: {v: '1.0', callback: 'JSON_CALLBACK', output: 'xml'}}
 	});
 })
