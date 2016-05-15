@@ -6,13 +6,13 @@
                 Execution time: {{ executionTime }}
             </p>
         </div>
-        <button class="button button-full button-positive" ng-click="getFeed('rss/rss10.xml')">
+        <button class="button button-full button-positive" ng-click="getFeed(10)" id="rss10-run-button">
           Run calculation 10
         </button>
-        <button class="button button-full button-positive" ng-click="getFeed('rss/rss100.xml')">
+        <button class="button button-full button-positive" ng-click="getFeed(100)" id="rss100-run-button">
           Run calculation 100
         </button>
-        <button class="button button-full button-positive" ng-click="getFeed('rss/rss1000.xml')">
+        <button class="button button-full button-positive" ng-click="getFeed(1000)" id="rss1000-run-button">
           Run calculation 1000
         </button>
         <button class="button button-full button-assertive" ng-click="resetFeed()">
