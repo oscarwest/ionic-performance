@@ -1,20 +1,26 @@
 <ion-view title="RSS Feed">
     <ion-content overflow-scroll="true" padding="true" class="has-header">
-        <h1>{{ feed.title }}</h1>
+        <h1>{{ rssFeedChannel.title }}</h1>
         <div>
             <p>
                 Execution time: {{ executionTime }}
             </p>
         </div>
-        <button class="button button-full button-positive" ng-click="getFeed()">
-          Run calculation
+        <button class="button button-full button-positive" ng-click="getFeed('rss/rss10.xml')">
+          Run calculation 10
+        </button>
+        <button class="button button-full button-positive" ng-click="getFeed('rss/rss100.xml')">
+          Run calculation 100
+        </button>
+        <button class="button button-full button-positive" ng-click="getFeed('rss/rss1000.xml')">
+          Run calculation 1000
         </button>
         <button class="button button-full button-assertive" ng-click="resetFeed()">
           Reset
         </button>
         <ion-list>
-            <ion-item class="item-thumbnail-left" ng-repeat="item in feed.item">
-                <img src="http://{{ item.enclosure._url }}">
+            <ion-item class="item-thumbnail-left" ng-repeat="item in rssFeedChannel.item">
+                <img src="{{ item.enclosure._url }}">
                 <h2>{{ item.title }}</h2>
                 <p>{{ item.description }}</p>
             </ion-item>
